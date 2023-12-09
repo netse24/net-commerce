@@ -11,9 +11,9 @@ return new class extends Migration
      */
     public function up(): void
     {
-        Schema::create('logos', function (Blueprint $table) {
+        Schema::create('user_books', function (Blueprint $table) {
             $table->id();
-            $table->longText('image');
+            $table->foreignId('user_id')->nullable()->index();
             $table->timestamps();
         });
     }
@@ -23,6 +23,6 @@ return new class extends Migration
      */
     public function down(): void
     {
-        Schema::dropIfExists('logos');
+        Schema::dropIfExists('user_books');
     }
 };

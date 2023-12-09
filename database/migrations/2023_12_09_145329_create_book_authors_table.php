@@ -11,9 +11,10 @@ return new class extends Migration
      */
     public function up(): void
     {
-        Schema::create('logos', function (Blueprint $table) {
+        Schema::create('book_authors', function (Blueprint $table) {
             $table->id();
-            $table->longText('image');
+            $table->foreignId('book_id')->nullable()->index();
+            $table->foreignId('author_id')->nullable()->index();
             $table->timestamps();
         });
     }
@@ -23,6 +24,6 @@ return new class extends Migration
      */
     public function down(): void
     {
-        Schema::dropIfExists('logos');
+        Schema::dropIfExists('book_authors');
     }
 };

@@ -25,7 +25,7 @@
 </head>
 
 <body class="antialiased">
-    <nav class="navbar navbar-expand-lg navbar-light bg-light shadow-lg">
+    <nav class="navbar navbar-expand-lg navbar-light bg-light shadow-md">
         <div class="container-fluid">
             <a class="navbar-brand rounded-circle" href="/">
                 <img src="{{ asset('storage/'.$logo['image'])}}" alt="logo" width="50" height="50" class="rounded-circle shadow-lg bg-body">
